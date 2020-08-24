@@ -9,6 +9,14 @@ This repository contains code for the paper [Using Deep Networks for Scientific 
 
 **Proceedings of Machine Learning for Healthcare, 2020**
 
+Deep neural networks (DNN) have shown remarkable success in the classification of physiological signals. In this study we propose a novel method of “removing” known, hand-engineered features from the network’s hypothesis space, thus forcing it to try learn representations which are different from known ones, as a method of scientific exploration. We then build on existing work in the field of interpretability, specifically class activation maps, to try infer what new features the network has learned.
+
+By adding the known domain knowledge/feature sets to CNN’s latent representation layer, and imposing independence between the two, the network is encouraged to learn an orthogonal representation to the known domain knowledge. We do this by optimizing an objective that trades off classification performance with the statistical independence, as measured by the Hilbert Schmidt Independence Criterion (HSIC).
+
+In order to test this approach two domains were selected : Arrhythmia detection in ECG signals, and REM-NREM classification in EEG signal. Both have been well studied, making good them benchmarks to test our framework.
+
+Full paper is avilable [Here](https://static1.squarespace.com/static/59d5ac1780bd5ef9c396eda6/t/5f22cc45a1025d04faaf5b7c/1596116059099/126_CameraReadySubmission_Deep_networks_for_scientific_discovery_in_physiological_signals+%281%29.pdf)
+
 ### To apply the method on your task
 Integrate `HSICClassifier` from `networks.py` and `HSICLoss` from `hsic.py` in your classification task
 
