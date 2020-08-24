@@ -11,7 +11,7 @@ This repository contains code for the paper [Using Deep Networks for Scientific 
 
 Deep neural networks (DNN) have shown remarkable success in the classification of physiological signals. In this study we propose a novel method of “removing” known, hand-engineered features from the network’s hypothesis space, thus forcing it to try learn representations which are different from known ones, as a method of scientific exploration. We then build on existing work in the field of interpretability, specifically class activation maps, to try infer what new features the network has learned.
 
-By adding the known domain knowledge/feature sets to CNN’s latent representation layer, and imposing independence between the two, the network is encouraged to learn an orthogonal representation to the known domain knowledge. We do this by optimizing an objective that trades off classification performance with the statistical independence, as measured by the Hilbert Schmidt Independence Criterion (HSIC).
+By adding domain knowledge based feature sets to CNN’s latent representation layer, and imposing independence between the two, the network is encouraged to learn an orthogonal representation to the known domain knowledge. We do this by optimizing an objective that trades off classification performance with the statistical independence, as measured by the Hilbert Schmidt Independence Criterion (HSIC).
 
 In order to test this approach two domains were selected : Arrhythmia detection in ECG signals, and REM-NREM classification in EEG signal. Both have been well studied, making good them benchmarks to test our framework.
 
